@@ -1,0 +1,84 @@
+.tovar-discount {
+    height: 42px;
+    color: #fff;
+    padding-left: 150px;
+}
+
+.discount-value {
+    background-color: #d27c07;
+    float: left;
+    width: 53px;
+    line-height: 43px;
+    height: 42px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.discount-economy {
+    float: left;
+    width: 154px;
+    font-size: 11px;
+    height: 42px;
+    line-height: 41px;
+    text-align: center;
+    background-color: #f18d04;
+}
+
+
+.discount-economy .label {
+    font-weight: 500;
+}
+
+.discount-tip {
+    position: relative;
+    cursor: default;
+}
+
+.tooltip {
+    background-color: #d27c07;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    display: inline-table;
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 50%;
+    margin-left: 3px;
+    position: relative;
+    z-index: 20;
+}
+
+
+.tooltip::after {
+    position: absolute;
+    z-index: 10;
+    top: -6px;
+    right: -6px;
+    background: #fff;
+    font-size: 11px;
+    line-height: 16px;
+    color: #626262;
+    content: attr(data-tooltip); /* Главная часть кода, определяющая содержимое всплывающей подсказки */
+    opacity: 0; /* Наш элемент прозрачен... */
+    visibility: hidden; /* ...и скрыт. */
+    transition: all 0.4s ease-in-out; /* Добавить плавности по вкусу */
+    width: 328px ;
+    text-align: right;
+    border-radius: 2px;
+    box-sizing: border-box;
+    padding: 10px 35px 10px 10px;
+}
+
+.tooltip:hover::after {
+    opacity: 1; /* Показываем его */
+    visibility: visible;
+}
+
+.container {
+    background-color: #626262;
+    height: 500px
+}
